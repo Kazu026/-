@@ -6,4 +6,9 @@
         xmlns:local="clr-namespace:テストアプリケーション"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Margin="329,193,0,0"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="223,193,0,0" VerticalAlignment="Top"/>
+    </Grid>
+
 </Window>
