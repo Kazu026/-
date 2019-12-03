@@ -6,7 +6,5 @@
         xmlns:local="clr-namespace:テストアプリケーション"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="246,100,0,0" VerticalAlignment="Top"/>
-    </Grid>
+   
 </Window>
