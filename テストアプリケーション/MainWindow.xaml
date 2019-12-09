@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:テストアプリケーション"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Margin="329,193,0,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="223,193,0,0" VerticalAlignment="Top"/>
+        Title="テストアプリケーション" Height="450" Width="800" Margin="0,0,2,2">
+    <Grid x:Name="grid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Margin="26,28,0,0" Checked="CheckBox_Checked_1" RenderTransformOrigin="-1.687,-2.188"/>
+        <Button Content="追加" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="116" BorderThickness="1,1,1,1" FontSize="16" Click="button_Click" Margin="314,208,0,0"/>
+        <TextBox x:Name="greetingText"  HorizontalAlignment="Center" Margin="265,80,0,0" Text="{Binding greet}" TextWrapping="Wrap" VerticalAlignment="Center" Width="214"   FontStyle="Normal" TextAlignment="Center" Height="47" RenderTransformOrigin="0.509,0.488" TextChanged="greetingText_TextChanged"/>
     </Grid>
 
 </Window>
