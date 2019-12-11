@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,10 @@ namespace テストアプリケーション
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int check = 0;
+        
+        private int counter = 0;
+        private TextBox[] myText = new TextBox[10];
+
         GreetinfgClass greeting;
         public MainWindow()
         {
@@ -30,7 +34,7 @@ namespace テストアプリケーション
             InitializeComponent();
             greeting = new GreetinfgClass
             {
-                greet = "こんにちは"
+                greet = "要求"
             };
             this.DataContext = greeting;
         }
@@ -40,32 +44,38 @@ namespace テストアプリケーション
         
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if (check == 1)
-            {
+          
+                if (counter >= 10)
+                {
+                    MessageBox.Show("満杯");
+                    return;
+                }
+                else
+                {
+                    Addbutton.Margin = new Thickness(314, 278+70*counter, 0, 0);
+                    myText[counter] = new TextBox();
+                    myText[counter].Name = "a";
+                    myText[counter].Width = 214;
+                    myText[counter].Height = 47;
+                    myText[counter].HorizontalAlignment = 0;
+                    myText[counter].VerticalAlignment = 0;
+                    myText[counter].Margin = new Thickness(265, 150+70*counter, 0, 0);
+                    myText[counter].Text = "仕様";
+                    grid.Children.Add(myText[counter]);
+                    counter++;
+                }
 
-                TextBox myText = new TextBox();
-                myText.Name = "a";
-                myText.Width = 214;
-                myText.Height = 47;
-                myText.Margin = new Thickness(265, 150, 0, 0);
-                myText.Text = "成功";
-                grid.Children.Add(myText);
-
-            }
+            
               
 
-            else
-            {
-
-                greetingText.Text = "おはよう";
-            }     
+                 
                 
            
         }
 
         private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
         {
-            check = 1;
+           
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -75,6 +85,13 @@ namespace テストアプリケーション
 
         private void greetingText_TextChanged(object sender, TextChangedEventArgs e)
         {
+
+        }
+
+        private void Savebutton_Click(object sender, RoutedEventArgs e)
+        {
+
+
 
         }
     }

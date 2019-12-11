@@ -14,6 +14,7 @@ namespace テストアプリケーション
     {
         public require()
         {
+            
            
         }
         public void addrequire(int _counter)

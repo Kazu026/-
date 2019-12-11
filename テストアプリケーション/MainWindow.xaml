@@ -5,11 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:テストアプリケーション"
         mc:Ignorable="d"
-        Title="テストアプリケーション" Height="450" Width="800" Margin="0,0,2,2">
-    <Grid x:Name="grid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Margin="26,28,0,0" Checked="CheckBox_Checked_1" RenderTransformOrigin="-1.687,-2.188"/>
-        <Button Content="追加" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="116" BorderThickness="1,1,1,1" FontSize="16" Click="button_Click" Margin="314,208,0,0"/>
-        <TextBox x:Name="greetingText"  HorizontalAlignment="Center" Margin="265,80,0,0" Text="{Binding greet}" TextWrapping="Wrap" VerticalAlignment="Center" Width="214"   FontStyle="Normal" TextAlignment="Center" Height="47" RenderTransformOrigin="0.509,0.488" TextChanged="greetingText_TextChanged"/>
+        Title="テストアプリケーション" Height="1000" Width="1600" Margin="0,0,2,2">
+    <Grid x:Name="grid" Margin="4,0,800,0" RenderTransformOrigin="0,0" Height="983" ShowGridLines="True">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.063"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Button x:Name="Addbutton" Content="追加" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="116" BorderThickness="1,1,1,1" FontSize="16" Click="button_Click" Margin="314,208,0,0"/>
+        <TextBox x:Name="greetingText"  HorizontalAlignment="Left" Margin="265,80,0,0" Text="{Binding greet}" TextWrapping="Wrap" VerticalAlignment="Top" Width="214"   FontStyle="Normal" TextAlignment="Center" Height="47" RenderTransformOrigin="0.509,0.488" TextChanged="greetingText_TextChanged"/>
+        <Button x:Name="Savebutton" Content="保存" HorizontalAlignment="Left" Margin="320,34,0,0" VerticalAlignment="Top" Height="22" Width="110" Click="Savebutton_Click"/>
     </Grid>
 
 </Window>
